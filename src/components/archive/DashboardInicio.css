@@ -1,0 +1,54 @@
+/* Estilos propios del DashboardInicio.
+   Extraídos de los antiguos `style={{...}}` inline. */
+
+.dash-hero {
+  background: linear-gradient(135deg, var(--arc-ink) 0%, #3d3028 100%);
+  box-shadow: 0 8px 32px rgba(38, 32, 27, 0.25);
+}
+
+.dash-stat {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.dash-stat__icon {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.dash-btn-primary {
+  background: linear-gradient(135deg, var(--arc-red), var(--arc-red-dark));
+  box-shadow: 0 4px 16px rgba(161, 51, 40, 0.4);
+}
+
+.dash-btn-ghost {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.dash-btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.dash-bar-track {
+  background: var(--arc-paper2);
+  border-radius: 99px;
+}
+
+.dash-bar-fill-red {
+  background: linear-gradient(90deg, var(--arc-red), var(--arc-brass));
+}
+
+.dash-bar-fill-olive {
+  background: linear-gradient(90deg, var(--arc-olive), var(--arc-brass));
+}
+
+.dash-history {
+  background: linear-gradient(135deg, var(--arc-brass-light), #ede2c8);
+  border: 1.5px solid rgba(173, 138, 80, 0.25);
+  box-shadow: 0 4px 20px rgba(173, 138, 80, 0.15);
+}
+
+.dash-tip {
+  background: var(--arc-olive-light);
+  border: 1.5px solid rgba(81, 107, 71, 0.19);
+}

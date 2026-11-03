@@ -1,0 +1,17 @@
+node_modules
+dist
+dist-ssr
+*.local
+.env
+.env.*
+!.env.example
+
+# Archivos temporales y cachés
+*.log
+*.tsbuildinfo
+.eslintcache
+.DS_Store
+Thumbs.db
+Desktop.ini
+test-results/
+playwright-report/

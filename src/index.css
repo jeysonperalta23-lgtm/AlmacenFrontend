@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+/* Sistema de diseño Archivo — 100% Tailwind vía @apply.
+   Única fuente de estilos compartidos. Sin CSS puro suelto. */
+
+@layer components {
+  /* Estructura */
+  .page-archivo { @apply bg-arc-paper min-h-screen font-sans text-arc-ink; }
+  .header-archivo { @apply relative overflow-hidden bg-arc-header shadow-arc-header; }
+  .card-archivo { @apply bg-white border-[1.5px] border-arc-ink/10 shadow-arc-card rounded-2xl; }
+
+  /* Decoración */
+  .dots-archivo { @apply absolute inset-0 pointer-events-none bg-arc-dots-light bg-[size:20px_20px]; }
+  .dots-archivo-sm { @apply absolute inset-0 pointer-events-none bg-arc-dots-light-sm bg-[size:16px_16px]; }
+  .circle-deco { @apply absolute rounded-full pointer-events-none; }
+  .glass-archivo { @apply bg-white/15 backdrop-blur-md border border-white/30 shadow-[0_8px_32px_rgba(0,0,0,0.15)]; }
+  .glass-archivo-soft { @apply bg-white/15 backdrop-blur-md border border-white/25; }
+
+  /* Botones */
+  .btn-archivo { @apply text-white font-bold border-none cursor-pointer transition-all duration-300 bg-arc-btn shadow-arc-btn hover:brightness-110; }
+  .btn-archivo-success { @apply text-white font-bold border-none cursor-pointer transition-all duration-300 bg-gradient-to-br from-green-500 to-green-700 shadow-[0_6px_20px_rgba(34,197,94,0.35)]; }
+
+  /* Pestañas */
+  .tabs-archivo { @apply bg-arc-paper2 border-[1.5px] border-arc-ink/10 inline-flex flex-wrap justify-center max-w-full p-1.5 rounded-3xl sm:rounded-full shadow-inner gap-1; }
+  .tab-archivo { @apply bg-transparent text-arc-inkSoft flex items-center gap-2 px-6 py-3 rounded-full text-[15px] font-bold border-none cursor-pointer transition-all duration-300 hover:opacity-80; }
+  .tab-archivo-active { @apply text-white flex items-center gap-2 px-6 py-3 rounded-full text-[15px] font-bold border-none cursor-pointer transition-all duration-300 bg-arc-btn shadow-arc-btn-sm; }
+
+  /* Formulario expediente */
+  .fexp-card { @apply bg-white border-[1.5px] border-arc-line shadow-arc-fexp rounded-3xl mb-8 overflow-hidden; }
+  .fexp-header { @apply px-6 py-7 relative overflow-hidden bg-arc-header shadow-arc-header; }
+  .fexp-header-icon { @apply p-2.5 rounded-[14px] bg-white/10 border border-white/20 text-white; }
+  .fexp-field { @apply relative; }
+  .fexp-icon { @apply absolute left-3.5 top-1/2 -translate-y-1/2 z-10 transition-colors duration-300 text-arc-inkSoft; }
+  .fexp-icon-active { @apply text-arc-red; }
+  .fexp-icon-top { @apply top-5 translate-y-0; }
+  .fexp-input { @apply w-full pl-11 pr-4 py-3.5 text-[14.5px] rounded-xl outline-none transition-all duration-300 border-2 border-arc-ink/10 bg-white/70 text-arc-ink placeholder:text-gray-400 hover:bg-white hover:border-arc-ink/25; }
+  .fexp-input-active { @apply border-arc-red bg-white shadow-[0_0_0_4px_rgba(161,51,40,0.08)] -translate-y-0.5; }
+  .fexp-label { @apply absolute -top-2.5 left-3 px-1 text-[10.5px] font-black uppercase tracking-widest transition-colors duration-300 text-arc-inkSoft bg-white; }
+  .fexp-label-active { @apply text-arc-red; }
+  .fexp-divider { @apply h-px bg-gradient-to-r from-transparent via-arc-line to-transparent; }
+  .fexp-code-box { @apply bg-arc-brassLight border-[1.5px] border-dashed border-arc-brass rounded-2xl p-5; }
+  .fexp-tip-panel { @apply hidden lg:flex p-5 gap-5 flex-col w-full max-w-[280px] border-l-[1.5px] border-arc-line bg-arc-paper; }
+
+  /* Dashboard */
+  .dash-hero { @apply rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 overflow-hidden relative bg-arc-hero shadow-[0_8px_32px_rgba(38,32,27,0.25)]; }
+  .dash-stat { @apply rounded-2xl p-5 flex items-start gap-4 transition-transform hover:-translate-y-1 duration-300 cursor-default shadow-arc-stat; }
+}
